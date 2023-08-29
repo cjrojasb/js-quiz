@@ -6,7 +6,7 @@ import { Start } from "./components/Start";
 import { useQuestionsStore } from "./store/questions";
 
 function App() {
-  const { questions } = useQuestionsStore();
+  const questions = useQuestionsStore((state) => state.questions);
 
   const renderGame = () => {
     return questions.length > 0 ? <Game /> : <Start />;

@@ -25,7 +25,7 @@ const getBackgroundColor = (info: QuestionType, index: number) => {
 };
 
 export const Question = ({ info }: { info: QuestionType }) => {
-  const { selectAnswer } = useQuestionsStore();
+  const selectAnswer = useQuestionsStore((state) => state.selectAnswer);
 
   const handleClick = (answerIndex: number) => () => {
     selectAnswer(info.id, answerIndex);
