@@ -20,7 +20,7 @@ function App() {
           gap={2}
           alignItems="center"
           justifyContent="center"
-          mb={2}
+          mb={3}
         >
           <JavaScriptLogo />
           <Typography variant="h3" component="h2">

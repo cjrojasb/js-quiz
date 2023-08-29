@@ -5,7 +5,7 @@ export const Start = () => {
   const { fetchQuestions } = useQuestionsStore();
 
   const handleClick = () => {
-    fetchQuestions(5);
+    fetchQuestions(10);
   };
 
   return (
