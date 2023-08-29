@@ -60,7 +60,13 @@ export const useQuestionsStore = create<State>()(
     }),
     {
       name: "questions-storage",
-      storage: createJSONStorage(() => localStorage), // (optional) by default, 'localStorage' is used
+      storage: createJSONStorage(() => localStorage),
     }
   )
 );
+
+export const reset = () =>
+  useQuestionsStore.setState((state) => ({
+    currentQuestion: 0,
+    questions: [],
+  }));
